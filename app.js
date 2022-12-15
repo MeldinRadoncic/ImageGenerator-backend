@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended:false }))
 
 
 
-app.use('/openai', openAIrouter)
+app.use('https://image-generator-backend.vercel.app/openai', openAIrouter)
 
 
 
