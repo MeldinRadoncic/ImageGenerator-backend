@@ -1,5 +1,6 @@
 const dotenv = require('dotenv').config()
 const express = require('express')
+const cors = require('cors')
 const openAIrouter = require('./Routes/openAIroutes')
 const app = express()
 
@@ -10,6 +11,7 @@ app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE");
     next();
 }); 
+app.use(cors())
 app.use(express.urlencoded({ extended:false }))
 
 
