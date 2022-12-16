@@ -11,12 +11,13 @@ app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE");
     next();
 }); 
-app.use(cors())
+
 app.use(express.urlencoded({ extended:false }))
+app.use(cors())
 
 
 
-app.use('/openai', openAIrouter)
+app.use('/api/openai', openAIrouter)
 
 
 
