@@ -17,7 +17,7 @@ app.use(cors())
 
 
 
-app.use('/api/openai', openAIrouter)
+app.use('/openai', openAIrouter)
 
 
 
