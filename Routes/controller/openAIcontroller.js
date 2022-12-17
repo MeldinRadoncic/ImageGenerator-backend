@@ -20,8 +20,10 @@ const generateImage = async (req, res) => {
                 })
                 const imageUrl = response.data.data[0].url
                 res.status(200).json({ success:true, data:imageUrl })
+                console.log("This is server side status code " + res.status)
 
         } catch (error) {
+                console.log('This is server side error ' + error)
                 res.status(400)
                 res.json({message:"Sorry, That image cannot be generated. Please try again."})
         }
